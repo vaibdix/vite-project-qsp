@@ -1,0 +1,36 @@
+.join {
+  grid-area: join;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 2px solid black;
+}
+
+.join-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  line-height: 1.5;
+  max-height: 4.5em;
+}
+
+.join-button {
+  margin-top: 2rem;
+  font-size: 2rem;
+  align-self: flex-start;
+  padding: 0.5rem 2.5rem;
+  cursor: pointer;
+  border: 2px solid black;
+  background: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.join-button:hover {
+  background-color: black;
+  color: white;
+}

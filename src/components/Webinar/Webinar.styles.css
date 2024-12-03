@@ -1,0 +1,17 @@
+.webinar {
+  grid-area: webinar;
+  padding-left: 4rem;
+  padding-top: 4rem;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+}
+
+.wh1 {
+  font-size: 5rem;
+}
+
+.wh4 {
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  font-style: italic;
+}

@@ -1,0 +1,19 @@
+.yellow {
+  grid-area: yellow;
+  background-color: #e69c13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.it {
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: bolder;
+  display: block;
+}
