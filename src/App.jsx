@@ -1,11 +1,17 @@
 import Header from './components/Header/Header';
 import Container from './components/Container/Container';
+import JsxIntro from './components/jsxIntro/JsxIntro';
 
 function App() {
   return (
+    // <div>
+    //   {/* Assign */}
+    //   <Header />
+    //   <Container />
+    // </div>
     <div>
-      <Header />
-      <Container />
+      {/* jsxIntro */}
+      <JsxIntro />
     </div>
   );
 }
