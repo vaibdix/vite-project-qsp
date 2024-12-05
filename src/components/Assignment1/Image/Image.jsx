@@ -1,5 +1,5 @@
 import './Image.styles.css';
-import imageFile from '../../assets/portrait.png';
+import imageFile from '../../../assets/portrait.png';
 
 const Image = () => {
   return (

@@ -1,8 +1,8 @@
 import './Social.styles.css';
-import facebook from '../../assets/facebook.jpg';
-import insta from '../../assets/insta.jpg';
-import twitter from '../../assets/twitter.jpg';
-import whatsapp from '../../assets/whatsapp.jpg';
+import facebook from '../../../assets/facebook.jpg';
+import insta from '../../../assets/insta.jpg';
+import twitter from '../../../assets/twitter.jpg';
+import whatsapp from '../../../assets/whatsapp.jpg';
 
 const Social = () => {
   return (
