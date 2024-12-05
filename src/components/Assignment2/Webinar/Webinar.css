@@ -1,0 +1,35 @@
+.Webinar {
+  border: 1px solid black;
+  margin-left: 6.7rem;
+  width: 81%;
+  background-color: #fff;
+  margin-top: -1rem;
+}
+
+.first {
+  font-size: 5rem;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  padding-top: 1.5rem;
+  background-color: #fff;
+}
+
+.second {
+  font-size: 5rem;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.Webinar > p {
+  padding-top: 1rem;
+  font-style: italic;
+  font-size: 2rem;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+  background-color: #fff;
+}

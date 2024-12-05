@@ -1,0 +1,47 @@
+.footer {
+  display: flex;
+  width: 91.5%;
+  margin-left: 3.1rem;
+  color: white;
+}
+
+.red {
+  padding: 1rem;
+  padding-top: 3rem;
+  background-color: #ec4c6a;
+  max-width: 50%;
+}
+
+.red > h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  background-color: #ec4c6a;
+}
+
+.red > p {
+  background-color: #ec4c6a;
+}
+
+.cyan {
+  padding: 1rem;
+  padding-top: 3rem;
+  max-width: 50%;
+  background-color: #74b6cc;
+}
+
+.one {
+  font-size: 1.5rem;
+  background-color: #74b6cc;
+}
+
+.two {
+  font-size: 1.5rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+  background-color: #74b6cc;
+}
+
+.cyan > p {
+  margin-bottom: 1rem;
+  background-color: #74b6cc;
+}
