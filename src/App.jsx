@@ -1,3 +1,7 @@
+import { components } from './mdx-components'
+import NewMDX from './content/new.mdx'
+import './App.css'
+
 // import Header from './components/Assignment2/Header/Header';
 // import Imgg from './components/Assignment2/Imgg/Imgg';
 // import Webinar from './components/Assignment2/Webinar/Webinar';
@@ -28,10 +32,11 @@ function App() {
     //   <Footer />
     // </>
 
-    <>
-      hello
-    </>
+    // <>
+    //   hello
+    // </>
 
+    <NewMDX components={components} />
   );
 }
 
