@@ -72,3 +72,34 @@ index.html  <=  Main.jsx  <=  App.jsx  <=  demo.jsx  <=  demo1.jsx
 > Component architecture follows this structure for optimal performance
 
 _Note: JavaScript logic goes inside component functions but outside return()_
+
+
+### npx
+
+- npx is node package executable
+- npx will download only necessary packages and remaining pkg we can access without downloading them
+- eg Fb in mobile 2 ways - download fb app(similar to npm way) download and use
+                         - downloading the browser(necessary pkg) not downloading fb but downlaoding necessary pkg(browser) and exec fb on that pkg
+
+npm (Node Package Manager):
+1. Primary package manager for Node.js
+2. Used to install and manage project dependencies
+3. Installs packages globally or locally
+4. Manages packages listed in package.json
+5. Used for permanent package installations
+6. Example: npm install express
+7. Packages are stored in node_modules
+8. Used for project dependencies management
+9.
+
+npx (Node Package Execute):
+1. Package runner tool that comes with npm
+2. Executes packages without installing them globally
+3. Runs one-off commands/packages temporarily
+4. Downloads packages when needed, then removes them
+5. Ensures using latest version of packages
+6. Example: npx create-react-app my-app
+7. Avoids global package pollution
+8. Great for executing packages you'll use occasionally
+9. npx create-react-app myapp -- start command -- npm start (NOT RECOM)
+10. index.js is similar to main.jsx in vite wrapps app component

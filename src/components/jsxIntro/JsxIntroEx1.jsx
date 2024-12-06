@@ -3,6 +3,8 @@ import JsxRule2 from './jsxRules/JsxRule2';
 import JsxRule3 from './jsxRules/JsxRule3';
 import JsxRule4 from './jsxRules/JsxRule4';
 import JsxRule5 from './jsxRules/JsxRule5';
+import JsxRule6 from './jsxRules/JsxRule6';
+
 
 function JsxIntroEx1() {
   return (
@@ -13,6 +15,7 @@ function JsxIntroEx1() {
       <JsxRule3 />
       <JsxRule4 />
       <JsxRule5 />
+      <JsxRule6 />
     </div>
   );
 }
