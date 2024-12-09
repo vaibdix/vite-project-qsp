@@ -19,10 +19,7 @@ export function CodeBlock({ children, className }) {
 
   return (
     <div className="code-block-wrapper">
-      <button
-        className="copy-button"
-        onClick={copyToClipboard}
-      >
+      <button className="copy-button" onClick={copyToClipboard}>
         {copied ? 'Copied!' : 'Copy'}
       </button>
       <SyntaxHighlighter
@@ -31,7 +28,7 @@ export function CodeBlock({ children, className }) {
         customStyle={{
           margin: 0,
           borderRadius: '0.5rem',
-          padding: '1rem'
+          padding: '1rem',
         }}
       >
         {code}
