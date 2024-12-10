@@ -9,6 +9,7 @@ import './App.css';
 // import Footer from './components/Assignment2/Footer/Footer';
 import JsxIntro from './components/jsxIntro/JsxIntro';
 import Counter from './components/ClassBasedCompo/Counter';
+import UseStateIntro from './components/Hooks/useStateHook/useStateIntro';
 
 // import Header from './components/Assignment1/Header/Header';
 // import Container from './components/Assignment1/Container/Container';
@@ -23,7 +24,7 @@ function App() {
 
     // <>
     //   {/* jsxIntro */}
-    //   <JsxIntro />
+    //   {/* <JsxIntro /> *
     // </>
 
     // <>
@@ -38,7 +39,12 @@ function App() {
     //   hello
     // </>
 
-    <Two components={components} />
+    // Hooks
+    <>
+      <UseStateIntro />
+    </>
+
+    // <Two components={components} />
     // <Counter />
   );
 }
