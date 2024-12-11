@@ -20,7 +20,6 @@ const UseStateEx1 = () => {
         },
         return [a, setMyState];
       }; */}
-
     </>
   );
 };
