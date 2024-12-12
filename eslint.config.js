@@ -95,6 +95,8 @@ export default [
       quotes: ['error', 'single'],
       'jsx-quotes': ['error', 'prefer-double'],
 
+      'react/prop-types': 'off',
+
       // Prettier rules
       ...prettierRules,
 
