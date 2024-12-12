@@ -10,6 +10,7 @@ import './App.css';
 import JsxIntro from './components/jsxIntro/JsxIntro';
 import Counter from './components/ClassBasedCompo/Counter';
 import UseStateIntro from './components/Hooks/useStateHook/useStateIntro';
+import PropsIntro from './components/Props/propsInto';
 
 // import Header from './components/Assignment1/Header/Header';
 // import Container from './components/Assignment1/Container/Container';
@@ -40,9 +41,14 @@ function App() {
     // </>
 
     // Hooks
-    <>
-      <UseStateIntro />
-    </>
+    // <>
+    //   <UseStateIntro />
+    // </>
+
+    // Props
+    // <>
+    <PropsIntro />
+    // <>
 
     // <Two components={components} />
     // <Counter />
