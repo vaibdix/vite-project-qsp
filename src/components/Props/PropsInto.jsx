@@ -3,6 +3,7 @@ import Child from './Child';
 import CounterProps from './CounterProps';
 import ColorBox from './ColorBox';
 import ListProducts from './ListProducts';
+import Home from './PropsDrilling/Home';
 
 const PropsIntro = () => {
   const obj = {
@@ -128,6 +129,9 @@ const PropsIntro = () => {
 
       {/* Task */}
       <ListProducts products={taskData} />
+
+      {/* Props Drilling */}
+      <Home />
     </>
   );
 };
