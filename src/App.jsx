@@ -12,6 +12,7 @@ import Counter from './components/ClassBasedCompo/Counter';
 import UseStateIntro from './components/Hooks/useStateHook/useStateIntro';
 import PropsIntro from './components/Props/propsInto';
 import FlipKartHeader from './components/CssModules/FlipKartHeader';
+import Home from './components/ConditionalRendering/Home';
 
 // import Header from './components/Assignment1/Header/Header';
 // import Container from './components/Assignment1/Container/Container';
@@ -49,11 +50,16 @@ function App() {
     // Props
     // <>
     // <PropsIntro />
-    // <>
+    // </>
 
-    //CSS Modules
+    // CSS Modules
+    // <>
+    //   <FlipKartHeader />
+    // </>
+
+    // Conditional Rendering
     <>
-      <FlipKartHeader />
+      <Home />
     </>
 
     // <Two components={components} />

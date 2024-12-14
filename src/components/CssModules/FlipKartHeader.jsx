@@ -14,7 +14,6 @@ const FlipKartHeader = () => {
             alt="Flipkart"
             className={styles.logo}
           />
-
         </div>
 
         {/* Search Bar */}
@@ -33,21 +32,23 @@ const FlipKartHeader = () => {
 
         {/* Navigation Items */}
         <div className={styles.navItems}>
-          <button className={styles.loginButton}>Login
-            <i className="fas fa-chevron-down"></i></button>
+          <button className={styles.loginButton}>
+            Login
+            <i className="fas fa-chevron-down"></i>
+          </button>
           <div className={styles.cart}>
             <i className="fas fa-shopping-cart"></i>
             <span>Cart</span>
           </div>
 
-          <a href="#" className={styles.navLink}>Become a Seller</a>
+          <a href="#" className={styles.navLink}>
+            Become a Seller
+          </a>
 
           <div className={styles.dropdown}>
             <span>More</span>
             <i className="fas fa-chevron-down"></i>
           </div>
-
-
         </div>
       </div>
     </header>
