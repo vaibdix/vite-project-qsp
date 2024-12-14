@@ -1,4 +1,4 @@
-import Header from "./Header"
+import Header from './Header';
 
 const Home = () => {
   return (
@@ -6,6 +6,6 @@ const Home = () => {
       Home
       <Header name="Arvind to Cart PROPS DRILLING" />
     </div>
-  )
-}
+  );
+};
 export default Home;

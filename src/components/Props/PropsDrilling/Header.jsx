@@ -4,8 +4,8 @@ const Header = (props) => {
   return (
     <div>
       Header
-      <Cart data={props.name}/>
+      <Cart data={props.name} />
     </div>
-  )
-}
+  );
+};
 export default Header;
