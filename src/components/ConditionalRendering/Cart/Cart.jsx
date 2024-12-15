@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Cart.module.css';
 
 const Cart = ({ cartItems }) => {
@@ -11,7 +10,7 @@ const Cart = ({ cartItems }) => {
       <h2>Shopping Cart ({cartItems.length} items)</h2>
       {cartItems.map((item) => (
         <div key={item.id} className={styles.cartItem}>
-          <img src={item.image} alt={item.title} className={styles.cartItemImage} />
+          <img src={item.images[0]} alt={item.title} className={styles.cartItemImage} />
           <div className={styles.cartItemDetails}>
             <h3>{item.title}</h3>
             <p>${item.price}</p>
