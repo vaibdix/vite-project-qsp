@@ -100,7 +100,6 @@
   composes: button;
   background-color: #000;
   color: white;
-  margin-right: 1rem;
 }
 
 .loginButton:hover {
