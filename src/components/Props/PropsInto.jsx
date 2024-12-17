@@ -6,6 +6,8 @@ import ListProducts from './ListProducts/ListProducts';
 import Home from './PropsDrilling/Home';
 import PropsChildren from './PropsChildren/PropsChildren';
 import ParentCompo from './CounterPropsAdv/ParentCompo';
+import single from '../../assets/singlestore_logo_white.svg';
+import StateLiftingApp from './StateLifting/StateLiftingApp';
 
 const PropsIntro = () => {
   const obj = {
@@ -124,7 +126,7 @@ const PropsIntro = () => {
       {/* look in console */}
       <CounterProps data={updateCount}>asdasdcadcadc</CounterProps>
 
-      <PropsChildren name="props_children">
+      <PropsChildren name="props_children" logoImage={single}>
         <h4>Props children Header</h4>
         <p>Data from parent as children</p>
         <p>Props children para 2</p>
@@ -149,6 +151,9 @@ const PropsIntro = () => {
 
       {/* Props Drilling */}
       <Home />
+
+      {/* State lifting sending === sending data from child to parent compo */}
+      <StateLiftingApp />
     </>
   );
 };
