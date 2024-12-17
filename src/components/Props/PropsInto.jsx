@@ -2,14 +2,24 @@ import { useState } from 'react';
 import Child from './Child';
 import CounterProps from './CounterProps';
 import ColorBox from './ColorBox';
-import ListProducts from './ListProducts';
+import ListProducts from './ListProducts/ListProducts';
 import Home from './PropsDrilling/Home';
+import PropsChildren from './PropsChildren/PropsChildren';
+import ParentCompo from './CounterPropsAdv/ParentCompo';
 
 const PropsIntro = () => {
   const obj = {
     name: 'Arvind-obj',
     mobile: 123456789,
     qualification: 'MCA',
+  };
+
+  const arr = ['Arvind-Arr', 123456789, 'BSC'];
+
+  const [count, setCount] = useState(0);
+
+  const updateCount = () => {
+    setCount(count + 1);
   };
 
   const taskData = [
@@ -94,14 +104,6 @@ const PropsIntro = () => {
     },
   ];
 
-  const arr = ['Arvind-Arr', 123456789, 'BSC'];
-
-  const [count, setCount] = useState(0);
-
-  const updateCount = () => {
-    setCount(count + 1);
-  };
-
   return (
     <>
       <h1>PropsIntro</h1>
@@ -121,6 +123,21 @@ const PropsIntro = () => {
       {/* when sending data form non self closing tag */}
       {/* look in console */}
       <CounterProps data={updateCount}>asdasdcadcadc</CounterProps>
+
+      <PropsChildren name="props_children">
+        <h4>Props children Header</h4>
+        <p>Data from parent as children</p>
+        <p>Props children para 2</p>
+      </PropsChildren>
+
+      <PropsChildren name="props_children">
+        <h4>working</h4>
+        <p>passing name in component as prop wont work if provided with children elem</p>
+        <p>if data deleted in component then it takes name prop</p>
+      </PropsChildren>
+
+      {/* Advanced counter using props */}
+      <ParentCompo />
 
       {/* sending color as props */}
       <ColorBox dataColor="red" />
