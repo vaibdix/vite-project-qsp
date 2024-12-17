@@ -10,7 +10,7 @@ import './App.css';
 import JsxIntro from './components/jsxIntro/JsxIntro';
 import Counter from './components/ClassBasedCompo/Counter';
 import UseStateIntro from './components/Hooks/useStateHook/useStateIntro';
-import PropsIntro from './components/Props/propsInto';
+import PropsIntro from './components/Props/PropsInto';
 import FlipKartHeader from './components/CssModules/FlipKartHeader';
 import Home from './components/ConditionalRendering/Home';
 
@@ -48,9 +48,9 @@ function App() {
     // </>
 
     // Props
-    // <>
-    // <PropsIntro />
-    // </>
+    <>
+      <PropsIntro />
+    </>
 
     // CSS Modules
     // <>
@@ -58,9 +58,9 @@ function App() {
     // </>
 
     // Conditional Rendering
-    <>
-      <Home />
-    </>
+    // <>
+    //   <Home />
+    // </>
 
     // <Two components={components} />
     // <Counter />
