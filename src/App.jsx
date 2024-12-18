@@ -27,12 +27,11 @@ function App() {
     // </>
 
     // <>
-    //   {/* jsxIntro */}
-    //   {/* <JsxIntro /> *
+    //   <JsxIntro />
     // </>
 
     // <>
-    //    {/* Assignment 2 */}
+    //   Assignment 2
     //   <Header />
     //   <Imgg />
     //   <Webinar />
@@ -65,6 +64,7 @@ function App() {
 
     // <Two components={components} />
     // <Counter />
+
     <>
       <EventsIntro />
     </>

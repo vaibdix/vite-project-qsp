@@ -1,12 +1,13 @@
-import React from 'react';
 import styles from './Header.module.css';
-import logo from '../../../assets/singlestore_logo_white.svg'
+import logo from '../../../assets/singlestore_logo_white.svg';
 
 const Header = ({ data, cartItemsCount, onCartClick }) => {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <span><img src={logo} width={200}/></span>
+        <span>
+          <img src={logo} width={200} />
+        </span>
       </div>
       <nav className={styles.nav}>
         <ul className={styles.navList}>
