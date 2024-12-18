@@ -7,8 +7,9 @@
 /* CSS Reset */
 *, *::before, *::after {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 10;
+    padding: 10;
+    color: black;
 }
 
   /* Set core body defaults */
@@ -121,3 +122,12 @@
     @apply bg-gray-900 text-white;
   }
 }
+
+
+
+#eventsTask {
+  width: 15vw;
+  height: 15vw;
+  background: hsl(45, 100%, 51%)
+}
+

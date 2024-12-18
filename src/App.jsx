@@ -13,6 +13,7 @@ import UseStateIntro from './components/Hooks/useStateHook/useStateIntro';
 import PropsIntro from './components/Props/PropsInto';
 import FlipKartHeader from './components/CssModules/FlipKartHeader';
 import Home from './components/ConditionalRendering/Home';
+import EventsIntro from './components/Events/EventsIntro';
 
 // import Header from './components/Assignment1/Header/Header';
 // import Container from './components/Assignment1/Container/Container';
@@ -64,10 +65,9 @@ function App() {
 
     // <Two components={components} />
     // <Counter />
-
-    <h1 className="text-3xl font-bold underline text-amber-500">
-      Hello world
-    </h1>
+    <>
+      <EventsIntro />
+    </>
   );
 }
 
