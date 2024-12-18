@@ -48,9 +48,9 @@ function App() {
     // </>
 
     // Props
-    <>
-      <PropsIntro />
-    </>
+    // <>
+    //   <PropsIntro />
+    // </>
 
     // CSS Modules
     // <>
@@ -64,6 +64,10 @@ function App() {
 
     // <Two components={components} />
     // <Counter />
+
+    <h1 className="text-3xl font-bold underline text-amber-500">
+      Hello world!
+    </h1>
   );
 }
 
