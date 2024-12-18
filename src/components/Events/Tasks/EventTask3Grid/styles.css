@@ -1,0 +1,34 @@
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.grid-box {
+  width: 1.5vw;
+  height: 1.5vw;
+  background: #b45309;
+  transition: background 0.3s ease;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid-box:hover {
+  background: #fdba74;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+}
