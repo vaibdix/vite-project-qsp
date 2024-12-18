@@ -66,7 +66,7 @@ function App() {
     // <Counter />
 
     <h1 className="text-3xl font-bold underline text-amber-500">
-      Hello world!
+      Hello world
     </h1>
   );
 }
