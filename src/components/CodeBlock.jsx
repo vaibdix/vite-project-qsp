@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-export function CodeBlock({ children, className }) {
+export const CodeBlock = ({ children, className }) => {
   const [copied, setCopied] = useState(false);
   const language = className ? className.replace('language-', '') : 'text';
   const code = children.trim();
@@ -35,4 +35,4 @@ export function CodeBlock({ children, className }) {
       </SyntaxHighlighter>
     </div>
   );
-}
+};

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function UseStateEx5() {
+const UseStateEx5 = () => {
   const [change, setChange] = useState(false);
 
   const shapeStyle = {
@@ -16,6 +16,6 @@ function UseStateEx5() {
       <button onClick={() => setChange(!change)}>Change to {change ? 'Box' : 'Circle'}</button>
     </div>
   );
-}
+};
 
 export default UseStateEx5;

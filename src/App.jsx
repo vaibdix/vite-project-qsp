@@ -18,7 +18,7 @@ import EventsIntro from './components/Events/EventsIntro';
 // import Header from './components/Assignment1/Header/Header';
 // import Container from './components/Assignment1/Container/Container';
 
-function App() {
+const App = () => {
   return (
     // <>
     //   {/* Assign */}
@@ -69,6 +69,6 @@ function App() {
       <EventsIntro />
     </>
   );
-}
+};
 
 export default App;

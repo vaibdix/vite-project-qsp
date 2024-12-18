@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function UseStateEx4() {
+const UseStateEx4 = () => {
   const [isCircle, setIsCircle] = useState(false);
 
   const shapeStyle = {
@@ -18,6 +18,6 @@ function UseStateEx4() {
       </button>
     </div>
   );
-}
+};
 
 export default UseStateEx4;

@@ -5,8 +5,9 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import prettier from 'eslint-plugin-prettier';
 import eslintConfigPrettier from 'eslint-config-prettier';
+import imports from 'eslint-plugin-import';
 
-// Prettier config
+// Prettier config aligned with Airbnb
 const prettierRules = {
   'prettier/prettier': [
     'error',
@@ -15,11 +16,11 @@ const prettierRules = {
       tabWidth: 2,
       printWidth: 100,
       singleQuote: true,
-      trailingComma: 'es5',
+      trailingComma: 'all',
       bracketSpacing: true,
       bracketSameLine: false,
       arrowParens: 'always',
-      endOfLine: 'auto',
+      endOfLine: 'lf',
       jsxSingleQuote: false,
       quoteProps: 'as-needed',
       useTabs: false,
@@ -27,27 +28,76 @@ const prettierRules = {
   ],
 };
 
-const quoteRules = {
-  quotes: ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }],
-  'jsx-quotes': ['error', 'prefer-double'],
+const airbnbRules = {
+  // React rules
+  'react/jsx-filename-extension': ['error', { extensions: ['.jsx'] }],
+  'react/function-component-definition': [
+    'error',
+    { namedComponents: 'arrow-function', unnamedComponents: 'arrow-function' },
+  ],
+  'react/jsx-props-no-spreading': 'error',
+  'react/react-in-jsx-scope': 'off',
+  'react/require-default-props': 'off',
+  'react/jsx-no-bind': [
+    'error',
+    {
+      allowArrowFunctions: true,
+      allowBind: false,
+      ignoreRefs: true,
+    },
+  ],
+
+  // Import rules
+  'import/no-unresolved': 'error',
+  'import/extensions': [
+    'error',
+    'ignorePackages',
+    {
+      js: 'never',
+      jsx: 'never',
+    },
+  ],
+  'import/prefer-default-export': 'error',
+  'import/no-extraneous-dependencies': [
+    'error',
+    {
+      devDependencies: [
+        'test/**',
+        'tests/**',
+        'spec/**',
+        '**/__tests__/**',
+        'test.{js,jsx}',
+        'test-*.{js,jsx}',
+        '**/*{.,_}{test,spec}.{js,jsx}',
+        '**/vite.config.js',
+        '**/jest.config.js',
+      ],
+    },
+  ],
+
+  // General JavaScript rules
+  'no-unused-vars': ['error', { vars: 'all', args: 'after-used', ignoreRestSiblings: true }],
+  'no-console': ['error', { allow: ['warn', 'error'] }],
+  'no-param-reassign': ['error', { props: true, ignorePropertyModificationsFor: ['state'] }],
+  'prefer-destructuring': ['error', { array: true, object: true }],
+  'no-use-before-define': ['error', { functions: false, classes: true, variables: true }],
 };
 
 export default [
-  { ignores: ['dist', 'node_modules', 'build'] }, // Add more common ignore patterns
+  { ignores: ['dist', 'node_modules', 'build'] },
   eslintConfigPrettier,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'], // Add TypeScript support if needed
+    files: ['**/*.{js,jsx}'],
     languageOptions: {
-      ecmaVersion: 2020,
+      ecmaVersion: 2024,
       globals: {
         ...globals.browser,
-        ...globals.node, // Add Node.js globals if needed
       },
       parserOptions: {
         ecmaVersion: 'latest',
         ecmaFeatures: {
           jsx: true,
-          impliedStrict: true, // Add implied strict mode
+          impliedStrict: true,
         },
         sourceType: 'module',
       },
@@ -57,7 +107,6 @@ export default [
         version: '18.3',
       },
       'import/resolver': {
-        // Add import resolver if you use eslint-plugin-import
         node: {
           extensions: ['.js', '.jsx'],
         },
@@ -68,6 +117,7 @@ export default [
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
       prettier,
+      import: imports,
     },
     rules: {
       // ESLint recommended rules
@@ -80,28 +130,14 @@ export default [
       // React Hooks rules
       ...reactHooks.configs.recommended.rules,
 
-      // Custom rules
-      'react/jsx-one-expression-per-line': 'off',
-      'react/jsx-no-target-blank': 'off',
+      // Airbnb rules
+      ...airbnbRules,
+
+      // React Refresh rules
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
 
-      // Additional recommended rules
-      'no-console': 'warn',
-      'no-unused-vars': 'warn',
-      'prefer-const': 'error',
-      'no-var': 'error',
-
-      // Quote rules
-      quotes: ['error', 'single'],
-      'jsx-quotes': ['error', 'prefer-double'],
-
-      'react/prop-types': 'off',
-
-      // Prettier rules
+      // Prettier rules (should be last to override other formatting rules)
       ...prettierRules,
-
-      // Prettier rules - these should come last
-      ...quoteRules,
     },
   },
 ];
