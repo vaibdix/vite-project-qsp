@@ -10,11 +10,7 @@ const EventsTask2 = () => {
   };
   return (
     <div>
-      <button
-        id="eventsTask"
-        onMouseEnter={handleOnMouseEnter}
-        onMouseLeave={handleOnMouseLeave}
-      >
+      <button id="eventsTask" onMouseEnter={handleOnMouseEnter} onMouseLeave={handleOnMouseLeave}>
         Hover Me
       </button>
     </div>
@@ -22,5 +18,3 @@ const EventsTask2 = () => {
 };
 
 export default EventsTask2;
-
-

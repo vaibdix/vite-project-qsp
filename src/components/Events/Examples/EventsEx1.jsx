@@ -11,8 +11,9 @@ const EventsEx1 = () => {
       <button className='bg-lime-300 px-3 mr-3' onMouseLeave={() => console.log('onMouseLeave')}>onMouseLeave</button>
       <button className='bg-cyan-300 px-3 mr-3' onMouseOver={() => console.log('onMouseOver')}>onMouseOver</button> */}
 
-
-      <button className='bg-lime-300 px-3 mr-3' onClick={() => console.log('Hello World')}>Click Me</button>
+      <button className="bg-lime-300 px-3 mr-3" onClick={() => console.log('Hello World')}>
+        Click Me
+      </button>
     </div>
   );
 };

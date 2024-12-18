@@ -13,10 +13,6 @@
 // };
 // export default EventsEx2;
 
-
-
-
-
 // const EventsEx2 = () => {
 //   let demo = (e) => {
 //     console.log('demo triggered');
@@ -37,10 +33,8 @@
 // };
 // export default EventsEx2;
 
-
-
 const EventsEx2 = () => {
-  let demo = (e) => {
+  const demo = (e) => {
     console.log('demo triggered');
   };
 
@@ -54,10 +48,10 @@ const EventsEx2 = () => {
           console.log(e);
         }}
         type="button"
-        className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4  font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700  dark:border-gray-700">
-          Default
-        </button>
-
+        className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4  font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700  dark:border-gray-700"
+      >
+        Default
+      </button>
     </div>
   );
 };

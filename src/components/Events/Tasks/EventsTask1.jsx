@@ -22,8 +22,6 @@ const EventsTask1 = () => {
 
 export default EventsTask1;
 
-
-
 // EVENTS ASSIGNMENT TASK 1 -- using USESTATE HOOK
 
 // import React, { useState } from 'react';
