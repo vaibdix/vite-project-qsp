@@ -16,7 +16,7 @@ const EventsIntro = () => {
       <EventsTask2 /> */}
       {/* <BoxGrid /> */}
       <AllTasks />
-      <EventsTask3 />
+      {/* <EventsTask3 /> */}
     </div>
   );
 };
