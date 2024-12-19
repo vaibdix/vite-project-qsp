@@ -84,6 +84,19 @@ export default EventTask4;
 
 
 
+// Dynamic State Updates:
+// handleChange dynamically updates the state based on the name and value properties of the input elements.
+// It uses the name attribute of the input (e.target.name) to determine which field (username or password) to update in the userInput object.
+
+// State Spread Syntax:
+// The spread operator (...userInput) is used to preserve the existing state values while updating only the specific field being edited.
+
+// Asynchronous Behavior of setUserInput:
+//setUserInput does not immediately update the state. React batches state updates for performance reasons, so the console.log(userInput) in the same function may log the previous state instead of the updated one.
+
+// Two-Way Binding Potential:
+// Since the state is tied to the value attribute of input fields, this enables two-way binding. Changes in the input fields update the state, and changes in the state can reflect back in the input fields.
+
 
 
 // const EventTask4 = () => {
