@@ -16,8 +16,8 @@ const Task8 = () => {
       style={{
         backgroundColor: 'wheat',
         padding: '20px',
-        borderRadius: '10px',
-        margin: '20px',
+        display: 'flex',
+        justifyContent: 'center',
       }}
     >
       <style>

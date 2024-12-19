@@ -1,7 +1,4 @@
-import { useState } from 'react';
 import plant from '../../../../assets/plant.svg';
-
-import React from 'react';
 
 const Task2 = () => {
   const handleMouseEvent = (e) => {

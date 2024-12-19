@@ -2,17 +2,34 @@ const Task7 = () => {
   const handleMouseMove = (e) => {
     const dot = document.querySelector('.dot');
     if (dot) {
-      dot.style.left = `${e.clientX}px`;
-      dot.style.top = `${e.clientY}px`;
+      // Get container's bounding rectangle
+      const container = e.currentTarget.getBoundingClientRect();
+      // Calculate relative position within the container
+      const x = e.clientX - container.left;
+      const y = e.clientY - container.top;
+
+      // Keep dot within container bounds
+      dot.style.left = `${Math.min(Math.max(0, x), container.width - 20)}px`;
+      dot.style.top = `${Math.min(Math.max(0, y), container.height - 20)}px`;
     }
   };
 
   return (
-    <div onMouseMove={handleMouseMove} style={{ height: '100vh' }}>
+    <div
+      onMouseMove={handleMouseMove}
+      style={{
+        height: '200px',
+        border: '1px solid #ccc',
+        borderRadius: '8px',
+        position: 'relative',
+        overflow: 'hidden',
+        margin: '0 0'
+      }}
+    >
       <div
         className="dot"
         style={{
-          position: 'fixed',
+          position: 'absolute',
           width: '20px',
           height: '20px',
           borderRadius: '50%',
@@ -20,7 +37,12 @@ const Task7 = () => {
           transition: 'all 0.1s ease',
         }}
       />
-      <p style={{ position: 'fixed', bottom: 20, left: 20 }}>
+      <p style={{
+        position: 'absolute',
+        bottom: 10,
+        left: 10,
+        margin: 0
+      }}>
         Wow, such skills! The dot is impressed.
       </p>
     </div>

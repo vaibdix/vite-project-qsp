@@ -14,7 +14,7 @@ const Task9 = () => {
   document.onvisibilitychange = handleVisibilityChange;
 
   return (
-    <div style={{ textAlign: 'center', padding: '20px' }}>
+    <div style={{ textAlign: 'center' }}>
       <h2>Page Visibility Tracker</h2>
       <p style={{ fontSize: '24px' }}>{message}</p>
       <p>Try switching to another tab!</p>
