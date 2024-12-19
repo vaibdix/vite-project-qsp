@@ -76,3 +76,55 @@ const EventTask4 = () => {
 };
 
 export default EventTask4;
+
+
+
+
+///////////////////////    CODE ONLY    ///////////////////////
+
+
+
+
+
+// const EventTask4 = () => {
+//   const [userInput, setUserInput] = useState({
+//     username: '',
+//     password: '',
+//   });
+
+//   const handleChange = (e) => {
+//     const { name, value } = e.target;
+//     setUserInput({ ...userInput, [name]: value });
+//     console.log(userInput);
+//   };
+
+//   return (
+//     <>
+//       <form>
+//         <label htmlFor="email" />
+//         <input
+//           onChange={handleChange}
+//           value={userInput.username}
+//           name="username"
+//           id="email"
+//           type="text"
+//         />
+//         <label htmlFor="password" />
+//         <input
+//           onChange={handleChange}
+//           value={userInput.password}
+//           name="password"
+//           id="password"
+//           type="password"
+//         />
+//         <button type="submit"> Submit </button>
+//       </form>
+//       <div>
+//         <p>{userInput.username}</p>
+//         <p>{userInput.password}</p>
+//       </div>
+//     </>
+//   );
+// };
+
+// export default EventTask4;
