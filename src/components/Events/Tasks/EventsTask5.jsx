@@ -1,23 +1,36 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-const EventTask4 = () => {
+const EventTask5 = () => {
   const [userInput, setUserInput] = useState({
     username: '',
     password: '',
   });
+
+  const [users, setUsers] = useState([]);
 
   const handleInput = (e) => {
     const { name, value } = e.target;
     setUserInput({ ...userInput, [name]: value });
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-  // NEVER SET STATE GLOBALLY
-  // eg setState({},{}) -- outside of funciton
-  // Goes into infinite loop
-  // infinite loop is caused by the fact that the state is being updated on every render, which triggers a re-render, which updates the state again, and so on.
-  // This is a common mistake when using hooks in React. The solution is to ensure that the state update is conditional, so that it doesn't trigger on every render.
-  //
+    // Update users state
+    // const newUsers = [...users, userInput];
+    setUsers({...users, userInput});
+
+    // Reset user input
+    setUserInput({
+      username: '',
+      password: '',
+    });
+  };
+
+  // Log users whenever they change
+  useEffect(() => {
+    console.log(users);
+  }, [users]); // This runs whenever `users` state changes
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900">
@@ -25,7 +38,7 @@ const EventTask4 = () => {
         <h2 className="text-2xl font-bold mb-5 text-gray-800 dark:text-white text-center">
           Login Form
         </h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="mb-5">
             <label
               htmlFor="username"
@@ -83,69 +96,4 @@ const EventTask4 = () => {
   );
 };
 
-export default EventTask4;
-
-
-
-
-///////////////////////    CODE ONLY    ///////////////////////
-
-
-
-// Dynamic State Updates:
-// handleChange dynamically updates the state based on the name and value properties of the input elements.
-// It uses the name attribute of the input (e.target.name) to determine which field (username or password) to update in the userInput object.
-
-// State Spread Syntax:
-// The spread operator (...userInput) is used to preserve the existing state values while updating only the specific field being edited.
-
-// Asynchronous Behavior of setUserInput:
-//setUserInput does not immediately update the state. React batches state updates for performance reasons, so the console.log(userInput) in the same function may log the previous state instead of the updated one.
-
-// Two-Way Binding Potential:
-// Since the state is tied to the value attribute of input fields, this enables two-way binding. Changes in the input fields update the state, and changes in the state can reflect back in the input fields.
-
-
-
-// const EventTask4 = () => {
-//   const [userInput, setUserInput] = useState({
-//     username: '',
-//     password: '',
-//   });
-
-//   const handleChange = (e) => {
-//     const { name, value } = e.target;
-//     setUserInput({ ...userInput, [name]: value });
-//     console.log(userInput);
-//   };
-
-//   return (
-//     <>
-//       <form >
-//         <label htmlFor="email" />
-//         <input
-//           onChange={handleChange}
-//           value={userInput.username}
-//           name="username"
-//           id="email"
-//           type="text"
-//         />
-//         <label htmlFor="password" />
-//         <input
-//           onChange={handleChange}
-//           value={userInput.password}
-//           name="password"
-//           id="password"
-//           type="password"
-//         />
-//         <button type="submit"> Submit </button>
-//       </form>
-//       <div>
-//         <p>{userInput.username}</p>
-//         <p>{userInput.password}</p>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default EventTask4;
+export default EventTask5;

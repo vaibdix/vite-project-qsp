@@ -6,6 +6,7 @@ import EventsTask2 from './Tasks/EventsTask2';
 import AllTasks from './Tasks/Assignment/AllTasks';
 import EventsTask3 from './Tasks/EventsTask3';
 import EventsTask4 from './Tasks/EventsTask4';
+import EventsTask5 from './Tasks/EventsTask5';
 
 const EventsIntro = () => {
   return (
@@ -18,7 +19,8 @@ const EventsIntro = () => {
       {/* <BoxGrid /> */}
       {/* <AllTasks /> */}
       {/* <EventsTask3 /> */}
-      <EventsTask4 />
+      {/* <EventsTask4 /> */}
+      <EventsTask5 />
     </div>
   );
 };
